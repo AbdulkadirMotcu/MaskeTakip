@@ -1,29 +1,38 @@
-﻿Degiskenler();
+﻿
+
+//Vatandas vatandas1 = new Vatandas();
+//vatandas1.Ad = "Kadir";
+//vatandas1.Soyad = "Motcu";
+//vatandas1.DogumYili = 2001;
+//vatandas1.TcNo = 10822281464;
 
 
-Vatandas vatandas1 = new Vatandas();
-vatandas1.Ad = "Kadir";
-vatandas1.Soyad = "Motcu";
-vatandas1.DogumYili = 2001;
-vatandas1.TcNo = 10822281464;
+SelamVer("Kadir");
+SelamVer();
+
+int sonuc = Topla(3,5);
+
+Console.WriteLine(sonuc);
 
 
 
-
-
-static void Degiskenler()
+static int Topla(int sayi1,int sayi2)
 {
-    string mesaj = "Selam";
-    double tutar = 100000;
-    int sayi = 0;
-    bool girisYapmismi = false;
-
-
-
-    Console.WriteLine(mesaj);
-    Console.WriteLine(mesaj);
-    Console.WriteLine(mesaj);
+    int sonuc = sayi1 + sayi2;
+    Console.WriteLine("Toplam : " + sonuc);
+    return sonuc;
 }
+
+
+
+static void SelamVer(string isim = "Kullanıcı")
+{
+    Console.WriteLine("Merhaba" + " " + isim);
+}
+
+
+
+
 
 //pascal casing 
 public class Vatandas
