@@ -1,10 +1,17 @@
-﻿
+﻿using Business.Concrete;
+using Entities.Concrete;
 
-//Vatandas vatandas1 = new Vatandas();
-//vatandas1.Ad = "Kadir";
-//vatandas1.Soyad = "Motcu";
-//vatandas1.DogumYili = 2001;
-//vatandas1.TcNo = 10822281464;
+Person person1 = new Person();
+person1.NotionalIdentity = 11111;
+person1.FirstName = "Abdulkadir";
+person1.LastName = "Motcu";
+person1.DateOfBrithyear = 2001;
+
+
+
+PttManager pttManager = new PttManager(new PersonManager());
+pttManager.GiveMask(person1);
+
 
 
 SelamVer("Kadir");
@@ -55,6 +62,9 @@ foreach (var sehir in yeniSehiler)
 }
 
 
+
+
+
 static int Topla(int sayi1,int sayi2)
 {
     int sonuc = sayi1 + sayi2;
@@ -71,8 +81,6 @@ static void SelamVer(string isim = "Kullanıcı")
 
 
 
-
-
 //pascal casing 
 public class Vatandas
 {
@@ -82,3 +90,6 @@ public class Vatandas
     public long TcNo { get; set; }
 
 }
+
+
+
