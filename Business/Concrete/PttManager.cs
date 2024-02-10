@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class PttManager
+    public class PttManager: ISupplierService
     {
         private IApplicantService _applicantService;
 
@@ -19,13 +19,14 @@ namespace Business.Concrete
 
         public void GiveMask(Person person) 
         {
-            
-
-            if (_applicantService.CheckPerson(person)==true)
+            if (_applicantService.CheckPerson(person))
             {
                 Console.WriteLine(person.FirstName + " için maske verildi");
             }
-
+            else
+            {
+                Console.WriteLine(person.FirstName + " Maske Verilemedi");
+            }
         } 
     }
 }
